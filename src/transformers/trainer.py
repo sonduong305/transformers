@@ -680,8 +680,7 @@ class Trainer:
             # Load in optimizer and scheduler states
             self.optimizer.load_state_dict(
                 torch.load(
-                    os.path.join(model_path, "optimizer.pt"),
-                    map_location=self.args.device,
+                    os.path.join(model_path, "optimizer.pt")
                 )
             )
             with warnings.catch_warnings(record=True) as caught_warnings:
